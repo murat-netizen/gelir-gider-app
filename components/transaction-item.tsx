@@ -41,9 +41,10 @@ export function TransactionItem({ transaction, onEdit, onDelete }: TransactionIt
               {transaction.company_name}
             </span>
             {transaction.is_recurring && (
-              <Repeat size={14} className="text-indigo-500 flex-shrink-0" title="Düzenli ödeme" />
+              <span title="Düzenli ödeme">
+                <Repeat size={14} className="text-indigo-500 flex-shrink-0" />
+              </span>
             )}
-          </div>
           <div className="flex items-center gap-2 text-sm text-slate-500">
             <span style={{ color: category.color }}>{category.name}</span>
             <span>•</span>
